@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prueba tabla</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+
+			// var table = $("#myTable");
+			// var table2 = document.getElementById('myTable');
+			// var hijos2 = table2.childNodes;
+			// console.log(table);
+			// console.log(table2);
+			// console.log(hijos2);
+
+			// genera_tabla();
+
+			// var tablax = document.getElementsByTagName('body');
+			// console.log(tablax)
+			// var hijo1 = tablax[0].children[0];
+			// console.log(hijo1);
+			// var hijo2 = tablax[0].children[0].children;
+			// console.log(hijo2);
+			// var hijo3 = tablax[0].children[0].children[0];
+			// console.log(hijo3);
+			// var hijo4 = tablax[0].children[0].children[0].children;
+			// console.log(hijo4)
+
+			var tablaxx = document.getElementById('myTable');
+			var tds = tablaxx.getElementsByTagName("td");
+			console.log(tds);
+
+		});
+
+		function genera_tabla() {
+			// Obtener la referencia del elemento body
+			var body = document.getElementsByTagName("body")[0];
+
+			// Crea un elemento <table> y un elemento <tbody>
+			var tabla   = document.createElement("table");
+			var tblBody = document.createElement("tbody");
+
+			// Crea las celdas
+			for (var i = 0; i < 2; i++) {
+				// Crea las hileras de la tabla
+				var hilera = document.createElement("tr");
+
+				for (var j = 0; j < 2; j++) {
+					// Crea un elemento <td> y un nodo de texto, haz que el nodo de
+					// texto sea el contenido de <td>, ubica el elemento <td> al final
+					// de la hilera de la tabla
+					var celda = document.createElement("td");
+					var textoCelda = document.createTextNode("celda en la hilera "+i+", columna "+j);
+					celda.appendChild(textoCelda);
+					hilera.appendChild(celda);
+				}
+
+				// agrega la hilera al final de la tabla (al final del elemento tblbody)
+				tblBody.appendChild(hilera);
+			}
+
+			// posiciona el <tbody> debajo del elemento <table>
+			tabla.appendChild(tblBody);
+			// appends <table> into <body>
+			body.appendChild(tabla);
+			// modifica el atributo "border" de la tabla y lo fija a "2";
+			tabla.setAttribute("border", "2");
+		}
+	</script>
+</head>
+<body>
+	<table id='myTable'>
+		<tr>
+			<th>Nombre</th>
+			<th>edad</th>
+			<th>pais</th>
+		</tr>
+		<tr>
+			<td>jose</td>
+			<td>25</td>
+			<td>colombia</td>
+		</tr>
+		<tr>
+			<td>juan</td>
+			<td>25</td>
+			<td>colombia</td>
+		</tr>
+	</table>
+</body>
+</html>

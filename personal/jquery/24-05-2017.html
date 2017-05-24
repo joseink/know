@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Probande jquery</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#miP").text('<b>Hola Mundo</b>');
+			$("#miSegundoP").html('<b>Hola Mundo</b>');
+			$("p.tdd").css('font-size', '42px');
+			$("#btn").click(function(event) {
+				event.preventDefault();
+				clonar();
+			});
+		});
+
+		var clonar = function(){
+			$("#name2").val($("#name1").val());
+		}
+	</script>
+</head>
+<body>
+
+	<p>Este mostrara la diferencia entre el metodo text() y html()</p>
+
+	<p id='miP' class="tdd">aaaaaa</p>
+	<p id='miSegundoP'></p>
+	<div class="tdd">Lkjsdkjdksj</div>
+	<form>
+		<input type="text" name="name1" id="name1">
+		<input type="text" name="name2" id="name2" readonly="true">
+		<button id='btn'>Click</button>
+	</form>
+</body>
+</html>

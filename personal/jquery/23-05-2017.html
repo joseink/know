@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Probando selectores</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('p.important').removeClass('important').addClass('oscuro rojo');
+		});
+	</script>
+	<style type="text/css">
+		.important{
+			font-size: 36px;
+		}
+		.oscuro{
+			font-weight: bold;
+		}
+		.rojo{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<p class="important">Hello world</p>
+</body>
+</html>

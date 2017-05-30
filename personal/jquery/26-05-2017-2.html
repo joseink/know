@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prueba 503</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#mibtn").click(function(event) {
+				console.log(event);
+				$("h2, p.neo, div, #miList .cofee").css('color', '#900C3F');
+			});
+		});
+	</script>
+</head>
+<body>
+	<h2>Mi parrafo</h2>
+	<p>sñlñlsdñlsdñlsdñlsdñlsdñl</p>
+	<p class="neo">sñlñlsdñlsdñlsdñlsdñlsdñl</p>
+	<div>ñsdñsdlñlsññdñsdñsdlñsdlñsdlsdñlsdñlñdsl</div>
+	<ul id="miList">
+	  <li class="cofee">Coffee</li>
+	  <li>Tea</li>
+	  <li>Milk</li>
+	  <li class="cofee">Capuchino</li>
+	</ul>
+	<button id="mibtn">Change the colors</button>
+</body>
+</html>

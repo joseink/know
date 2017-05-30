@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pruebas de jquery</title>
+	<style type="text/css">
+		#miDiv{
+			font-family: "Times New Roman"
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#miDiv").click(function(event) {
+				nuevaFuncion();
+			});
+		});
+
+		var nuevaFuncion = function(){
+			var actual = $("#miDiv").css('font-family');
+			alert(actual);
+			var nueva = $("#miDiv").css('font-family') == 'Times New Roman' ? 'fantasy' : 'Times New Roman';
+			$("#miDiv").css('font-family', nueva);
+		}
+	</script>
+</head>
+<body>
+
+	<div id="miDiv">
+		sdjkdksjdskjsdkjsdkjsdkjksdj
+	</div>
+
+</body>
+</html>

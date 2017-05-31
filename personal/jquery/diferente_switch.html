@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Probando otro switch</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var p =$("p");
+			var valor;
+			$.each(p,function(index, el) {
+				if(el.id){
+					valor = el.innerHTML;
+					console.log(valor);
+				}
+			});
+
+			var camino = {
+				'5': function(){
+					console.log('soy el 5');
+				},
+				10: function(){
+					console.log('soy el 10');
+				},
+				'default': function(){
+					console.log('soy la opcion por default');
+				}
+			}
+
+			if(camino[valor]){
+				camino[valor]();
+			}
+			else{
+				camino['default']();
+			}
+
+		
+		}); //fin ready
+	</script>
+</head>
+<body>
+
+<p>este script muestra otra forma de utilizar un switch en jquery</p>
+
+<p id='valor'>10</p>
+
+
+</body>
+</html>

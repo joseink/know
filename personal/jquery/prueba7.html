@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prueba bold</title>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#miBtn").click(function(event) {
+				var tagp = $("#miP");
+				console.log(tagp.val());
+				tagp.html("<p id='miP'><strong>"+tagp.text()+"</strong></p>");
+			});
+		});
+	</script>
+</head>
+<body>
+	<p id="miP">hsdjkhjsdhsdjh<p>
+	<button id="miBtn">Click</button>
+</body>
+</html>

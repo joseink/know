@@ -15,3 +15,13 @@ $("button#b1").on("click",	function()	{
 
 cambiar el value de atributos css
 $("p.color_change").css('color', 'red');
+
+// before() agrega el nodo justo antes del selector
+$(".html-generated").before(paragraph);
+
+
+// prepend() agrega el nodo al inicio del selector
+$("ul").prepend(jquery);
+
+// append() adds the node to the bottom of the selector
+    $("ul").append(jquery.clone());

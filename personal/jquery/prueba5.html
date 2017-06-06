@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>closest demo</title>
+  <style>
+  li {
+    margin: 3px;
+    padding: 3px;
+    background: #EEEEEE;
+  }
+  .hilight {
+    background: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+<div>aaa
+  <div>
+    <p>sldksdlkslkdlsklsdklsdkldsklasldklsk</p> 
+    <p>sldksdlkslkdlsklsdklsdkldsk</p>
+    <ul>
+      <li><b>Click me!</b></li>
+      <li>You can also <b>Click me!</b></li>
+    </ul>
+  </div>
+</div>
+ 
+<script>
+$(document).ready(function() {
+  $( "li" ).on( "click", function( event ) {
+    $( event.target ).closest( "div" ).toggleClass( "hilight" );
+  });
+});
+</script>
+ 
+</body>
+</html>

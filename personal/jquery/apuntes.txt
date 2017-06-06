@@ -1,0 +1,27 @@
+
+
+FADE IN OUT
+
+$(".slowly").fadeIn(); //aparece
+$(".slowly").fadeOut(); //desaparece
+$(".slowly").fadeIn(2000); //se especifica la velocidad en milisegundos
+$(".slowly").fadeOut(5000);//se especifica la velocidad en milisegundos
+
+$("button").on("click	dblclick"	// listener para dos eventos
+
+$("button#b1").on("click",	function()	{	
+		$("img").hide();	
+})	crear listener para cuando ocurra un evento
+
+cambiar el value de atributos css
+$("p.color_change").css('color', 'red');
+
+// before() agrega el nodo justo antes del selector
+$(".html-generated").before(paragraph);
+
+
+// prepend() agrega el nodo al inicio del selector
+$("ul").prepend(jquery);
+
+// append() adds the node to the bottom of the selector
+    $("ul").append(jquery.clone());

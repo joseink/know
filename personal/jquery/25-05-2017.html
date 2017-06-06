@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fade</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$("#tal, #cual").on('dblclick', function(event) {
+				alert('realizo doble click');
+				event.preventDefault();
+			});
+
+			$("#tal").on('click', function(event) {
+				event.preventDefault();
+				aparece();
+			});
+			$("#cual").on('click', function(event) {
+				event.preventDefault();
+				desaparece();
+			});
+		});
+
+		var aparece = function(){
+			$(".slowly").fadeIn();
+		}
+
+		var desaparece = function(){
+			$(".slowly").fadeOut();
+		}
+	</script>
+</head>
+<body>
+	<div id="mi" class='slowly' style="display: none">
+		sjahdjhjdshjdhsja
+	</div>
+	<div id="2" class="slowly">
+		ñskldslsdklkdlksdlk
+	</div>
+	<button id="tal">click</button>
+	<button id="cual">click</button>
+</body>
+</html>

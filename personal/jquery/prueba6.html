@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// $("p").prepend('<div>Hello World</div>');
+			$("p").before('<div>Hello World</div>');
+			$("ul").children().first().css('background-color', 'yellow');
+			$("ul").children().last().remove();
+			var data = $(".data").data("prop");
+			$(".data").text(data);
+		});
+	</script>
+</head>
+<body>
+
+	<p id="p1">sjdksjsdkjsdk</p>
+	<p id="p2">lksdlklkdsl</p>
+
+	<ul>
+		<li>klasjdkjskjdjs</li>
+		<li>klasjdkjskjdjs</li>
+		<li>klasjdkjskjdjs</li>
+		<li>klasjdkjskjdjs</li>
+		<li>klasjdkjskjdjs</li>
+	</ul>
+
+	<p class="data" data-prop='this is a paragraph'></p>
+
+</body>
+</html>

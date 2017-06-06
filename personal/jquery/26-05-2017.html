@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prueba jquery</title>
+	<style type="text/css">
+		p.color_change{
+			color: blue;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("p.color_change").click(function(event) {
+				$(this).css('color', 'red');
+			});
+		});
+	</script>
+</head>
+<body>
+	<p id="mip" class="color_change">kjkdsjksdjksdjksdjkdsj</p>
+	<p id="mip2" class="color_change">kjkdsjksdjksdjksdjkdsj</p>
+	<p id="mip3" class="color_change">kjkdsjksdjksdjksdjkdsj</p>
+</body>
+</html>

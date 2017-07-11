@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Probando document.querySelector</title>
+	<script type="text/javascript">
+		function miFunction(){
+			document.querySelector('h2, h3').style.backgroundColor = 'red';
+		}
+	</script>
+</head>
+<body>
+	<h3>Texto para la cabecera3</h3>
+	<h2>Texto para la cabecera2</h2>
+	<button onclick="miFunction();">Click</button>
+</body>
+</html>

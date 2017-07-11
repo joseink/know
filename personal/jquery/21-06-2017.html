@@ -1,0 +1,44 @@
+<!-- en este archivo vamos a ver como medir el ancho y alto de un elemento
+con borde, padding y margin tambien como medirlo sin estas propiedades -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Medir abcho y alto de elementos</title>
+	<style>
+		.miDiv {
+			width: 100px;
+			height: 352px;
+			background-color: yellow;
+			padding: 5px;
+			border-style: solid;
+			border-width: 0 2px 0 0;
+			margin: 3px;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type='text/javascript'>
+		$(document).ready(function() {
+				//sin padding, border o margin
+				var ancho1 = $(".miDiv").width();
+				var alto1 = $(".miDiv").height();
+				//con padding
+				var ancho2 = $(".miDiv").innerWidth();
+				var alto2 = $(".miDiv").innerHeight();
+				//padding y borde
+				var ancho3 = $(".miDiv").outerWidth();
+				var alto3 = $(".miDiv").outerHeight();
+				//padding, border y margin
+				var ancho4 = $(".miDiv").outerWidth(true);
+				var alto4 = $(".miDiv").outerHeight(true);
+
+				console.log( ancho1, alto1);
+				console.log( ancho2, alto2);
+				console.log( ancho3, alto3);
+				console.log( ancho4, alto4);
+		});	
+	</script>
+</head>
+<body>
+	<div class="miDiv">como medir los diferentes altos, anchos</div>
+</body>
+</html>

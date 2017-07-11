@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pruebas</title>
+	<style type="text/css">
+		#daily{
+			width: 400px;
+			height: 269px;
+			background-image: url("slow_loris.jpg");
+			position: absolute;
+			left: -400px;
+			top: 250px;
+		}
+
+		#daily h2{
+			font-family: arial, helvetica, sans-serif;
+			font-size: 2em;
+			font-weight: bold;			
+			text-align: center;
+			padding: 50px 0 0 150px;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#horizontal").click(function(event) {
+				getHorizontal();
+			});
+			$("#diagonal").click(function(event) {
+				getDiagonal();
+			});
+		});
+
+		var getHorizontal = function(){
+			var windowWidth = $(window).width();
+			var imageHorizOffset = ( ( windowWidth - 400) / 2 ) + 'px'
+			$("#daily").animate({left: imageHorizOffset});	
+		}
+
+		var getDiagonal = function(){
+			var windowWidth = $(window).width();
+			var imageHorizOffset = (( windowWidth - 400 ) / 2) + 'px'
+			var windowHeight = $(window).height();
+			var imageVertOffset = ( (windowHeight - 270 ) / 2 ) + 'px'
+			$("#daily").animate({left: imageHorizOffset, top: imageVertOffset} )
+		}
+	</script>
+</head>
+<body>
+	<div id="daily"><h2>Cute Animal<br>of the day: <br>the slow loris</h2></div>
+	<button id="horizontal">Horizontal</button>
+	<button id="diagonal">Diagonal</button>
+</body>
+</html>

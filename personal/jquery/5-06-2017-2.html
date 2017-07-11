@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Probando el metodo animate</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#show_more").click(function(event) {
+				$("p.expandable").animate({ width: "300px", height: "250px"});
+			});
+		});
+	</script>
+</head>
+<body>
+	<p id="ex_1" class="expandable">A	biologist,	a	chemist,	and	a statistician	are	out	hunting.	The	biologist	shoots	at	a rabbit	and	misses	five	feet	to	the	left.	The	chemist	shoots, and	misses	five	feet	to	the	right.	The	statistician	yells, “We	got	him!”</p>
+	<a	href="javascript:void(0)" id="show_more">Show	more</a>
+	</p>
+</body>
+</html>

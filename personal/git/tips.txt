@@ -1,0 +1,95 @@
+estado de archivos
+
+confirmado(committed)
+modificado(modified)
+preparado(staged)
+
+tres secciones principales de git
+
+working directory
+stagin area
+.git directory(repository)
+
+git fetch origin
+
+git checkout -t origin/desarrollo
+git checkout -t origin/pruebas
+
+
+untracked
+
+stage
+
+
+git stash guarda el estado del add
+git stash list
+
+
+crear tags
+los tags pueden ser locales y pueden ser compartidos a el repositorio remoto
+
+visualizar todos los tag
+git tag
+
+crear un tag
+git tag -a jlrodriguez_1 -m "probando tags"
+
+crea un tag en el ultimo commit de la rama donde haya creado el tag
+
+compartir tag en repositorio remoto
+git push origin jlrodriguez_1
+
+
+// proceso
+
+ubicarse en master
+
+git checkout master
+
+actualizar a lo ultimo en master
+
+git pull origin master
+
+crear un rama derivada de master con la convencion
+
+git checkout -b SOP_101514
+
+realizar ajuste
+
+verificar cambios
+
+git status
+
+agregar cambios
+
+git add 
+
+verificar cambios
+
+git status
+
+hacer commit de los cambios
+
+git commit -m "[SOP_101514] ajuste del campo ind_retmod"
+
+subir a la rama
+
+git push origin SOP_101514
+
+siguientes casos que se pueden presetar
+
+pull request master
+
+		ó
+
+pull request pruebas
+
+marcar close branch
+
+andres torres
+
+recibe el pull request
+
+aprueba o declina el pull request
+
+si se declina los ajustes deberan trabajarse en la misma rama
